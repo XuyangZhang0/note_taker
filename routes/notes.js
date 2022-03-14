@@ -30,6 +30,7 @@ notes.post('/', (req, res) => {
 notes.delete('/:id', (req, res) => {
     console.log("Method called is -- ", req.method);
     removeFromFile(req.params.id, './db/db.json');
+    res.status(201).end();
 })
 
 module.exports = notes;
